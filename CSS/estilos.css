@@ -1,0 +1,40 @@
+body {
+    background: #cccccc;
+    font-family: Arial;
+   }
+  
+  .menu{
+    background-color: #ebebeb;
+  }
+  
+  .menu ul {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .menu li {
+    list-style: none;
+  }
+  
+  a {
+    color: teal;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  .site-title {
+    color: #4f5453;
+    text-align: center;
+    font-variant-caps: all-small-caps;
+  }
+  
+  .site-subtitle {
+    color: #777d7b;
+    text-align: center;
+    font-variant-caps: all-petite-caps;
+  }
+  
+  
