@@ -3,7 +3,7 @@
    padding: 0;
    box-sizing: border-box; 
 }
-/* soft reset do css */
+   /* soft reset do css */
 
 body {
     background: #cccccc;
@@ -12,18 +12,18 @@ body {
    }
   
    /* Se a tela tiver pelo menos 4000px, vai carregar estes estilos*/
-   @media (min-width: 400px) {
-body {
-    font-size: 14px;
-}
-   }
 
-   @media (min-width: 600px) {
+   @media (min-width: 400px) {
     body {
-        font-size: 16px;
+        font-size: 14px;
     }
        }
-
+    
+       @media (min-width: 600px) {
+        body {
+            font-size: 16px;
+        }
+    }
 
 header {
     height: 90vh;
@@ -32,13 +32,13 @@ header {
     align-items: center;
 }
 
-  .menu{
+  .menu {
     width: 100vw;
     background-color: #ebebeb;
     position: fixed;
     top: 0;
   }
-  
+
   .menu ul {
     display: flex;
     justify-content: space-around;
@@ -48,7 +48,7 @@ header {
     list-style: none;
   }
   
-.menu a {
+   .menu a {
     display: block;
     padding: 10px 20px;
 }
