@@ -33,9 +33,9 @@ header {
 }
 
   .menu{
+    width: 100vw;
     background-color: #ebebeb;
     position: fixed;
-    width: 100vw;
     top: 0;
   }
   
