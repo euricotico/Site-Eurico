@@ -26,7 +26,7 @@ body {
    }
 
 header {
-   height: 90vh;
+   height: 80vh;
    display: flex;
    justify-content: center;
    align-items: center;
@@ -47,14 +47,20 @@ header {
  .menu li {
    list-style: none;
  }
- 
+  .menu a:active,
   .menu a {
    display: block;
    padding: 10px 20px;
+   transition: background-color 1s, color 0.3s;
+}
+
+.menu a:hover {
+  background-color: rgb(5, 172, 155);
+  color: white;
 }
 
  a {
-   color: teal;
+   color: rgb(5, 172, 155);
    text-decoration: none;
  }
  
@@ -62,21 +68,36 @@ header {
    text-decoration: underline;
  }
  
+.titulo {
+  transform: scale(.2) translateY(35vh);
+  opacity: 0;
+  animation: ease 1s animacaotitulo forwards;
+}
+
+@keyframes animacaotitulo {
+
+  100% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
  .site-title {
-   color: #4f5453;
+   color:   rgb(58, 58, 58);
    text-align: center;
    font-variant-caps: all-small-caps;
  }
  
  .site-subtitle {
-   color: #777d7b;
+   color: slategrey;
    text-transform: uppercase;
    text-align: center;
    font-variant-caps: 'Montserrat', sans-serif;
  }
  
  .site-title {
-     font-size: 6em;
+     font-size: 5em;
+     text-shadow: 0px 0px 3px rgba(0, 255, 179, 0.8)
  }
 
  .site-subtitle {
@@ -84,44 +105,42 @@ header {
 }
 
 .contato,
-.portfolio {
+.artes {
   padding: 2em;
   height: 100vh;
 }
 
 .contato {
-  color: #777d7b;
+  color: slategrey;
   margin-bottom: 1em;
   font-size: 1.5em;
-  text-align: center;
-}
+  }
 
 
-.portfolio h2 {
-  color: teal;
+.artes h2 {
+  color: slategrey;
   margin-bottom: 1em;
-  font-size: 3em;
-  text-align: center;
+  font-size: 2.5em;
 }
 
 .portfolio figure {
   text-align: center;
 }
 
-.portfolio .grid {
+.artes .grid {
   display: grid;
   gap: 2em;
   text-align: center;
 }
 
 @media (min-width: 560px) {
-  .portfolio .grid {
+  .artes .grid {
     grid-template-columns: 240px 240px; 
   }
 }
 
 @media (min-width: 880px) {
-  .portfolio .grid {
+  .artes .grid {
     grid-template-columns: repeat(3, 260px); 
     align-content: center;
     justify-content: center;
@@ -132,6 +151,7 @@ header {
    width: 180px;
    height: 240px;
    object-fit: cover;
+   transition: transform 0.6s;
 }
 @media (min-width: 1200px) {
   .img-portfolio {
@@ -140,8 +160,24 @@ header {
  }
 }
 
+.img-portfolio:hover {
+  transform: scale(1.4);
+
+}
+
 .contato a {
   color: #4f5453;
-  font-size: 2em;
+  font-size: 2.5em;
+}
 
+.contato :active,
+.contato a:hover {
+  text-decoration: none;
+  transition: text-shadow 0.5s;
+  text-shadow: 0px 0px 3px rgba(0, 255, 179, 0.8)
+  
+}
+
+.contato .icons {
+  text-align: center;
 }
